@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #184d47;
+  .CreateTodo {
+    input {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 15px;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      color: #184d47;
+    }
+    button {
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      width: 50%;
+      align-self: center;
+      border-radius: 15px;
+      outline: none;
+      border: none;
+      padding: 0.5rem;
+      font-weight: 700;
+      color: #184d47;
+      cursor: pointer;
+      font-family: "Lato", sans-serif;
+      background: #d6efc7;
+      transition: box-shadow 0.3s, width 0.5s;
+
+      &:hover {
+        box-shadow: 1px 1px 10px 1px #d6efc7;
+      }
+    }
+    margin: 5rem auto 1rem auto;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+  }
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .todo-item {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #96bb7c;
+    border-radius: 15px;
+    color: #184d47;
+    transition: 0.5s ease;
+    box-shadow: 1px 1px 15px 1px rgb(0, 0, 0);
+
+    .icons {
+      display: flex;
+      width: 15%;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .icon {
+        transition: 0.3s ease;
+        &:hover {
+          color: #d6efc7;
+        }
+      }
+    }
+    &.completed-task {
+      box-shadow: none;
+      .task {
+        text-decoration: line-through;
+        color: #d6efc7;
+      }
+    }
+  }
+}
