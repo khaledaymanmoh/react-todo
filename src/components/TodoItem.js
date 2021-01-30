@@ -55,14 +55,14 @@ const todoAnim = {
   hidden: {
     opacity: 0,
     scale: 1.1,
-    // y: -5,
-    width: '0%',
+    y: -5,
+    // width: '0%',
   },
   show: {
     opacity: 1,
     scale: 1,
-    // y: 0,
-    width: '50%',
+    y: 0,
+    // width: '50%',
 
     transition: {
       duration: 0.2,
