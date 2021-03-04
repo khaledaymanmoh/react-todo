@@ -30,7 +30,8 @@ const TodoItem = ({ todos, setTodos, id, task, completed }) => {
       variants={todoAnim}
       initial='hidden'
       animate='show'
-      exit='exit'
+      // exit='exit'
+      layout
       className={`todo-item ${completed ? 'completed-task' : ''}`}
     >
       <h2 className='task'>{task}</h2>
